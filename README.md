@@ -97,46 +97,35 @@ sequenceDiagram
     UI->>STT: POST audio clip (.wav)
     STT-->>Agent: Transcription: "order 89782837 deliver nahi hua cancel karna hai"
     
-    rect rgb(240, 248, 255)
-        Note over Agent,Tools: Phase A: Order Detection & Identity Gate
-        Agent->>Agent: Extracts Order ID: 89782837
-        Agent->>Tools: lookup_order("89782837") [Unverified call]
-        Tools-->>Agent: {"verification_required": true} (No order data disclosed)
-        Agent-->>UI: "सुरक्षा कारणों से, कृपया अपने पंजीकृत फ़ोन के आख़िरी 4 अंक या पिनकोड साझा करें।"
-    end
+    Note over Agent,Tools: Phase A: Order Detection & Identity Gate
+    Agent->>Agent: Extracts Order ID: 89782837
+    Agent->>Tools: lookup_order("89782837") [Unverified call]
+    Tools-->>Agent: {"verification_required": true} (No order data disclosed)
+    Agent-->>UI: "सुरक्षा कारणों से, कृपया अपने पंजीकृत फ़ोन के आख़िरी 4 अंक या पिनकोड साझा करें।"
 
     Customer->>UI: Speaks: "Last 4 digits are 4533."
     UI->>STT: POST audio clip (.wav)
     STT-->>Agent: Transcription: "last 4 digits are 4533"
 
-    rect rgb(245, 255, 245)
-        Note over Agent,Tools: Phase B: Caller Verification & Order Hydration
-        Agent->>Tools: lookup_order("89782837", verification_value="4533")
-        Tools-->>Agent: {"found": true, "verified": true, "status": "shipped", "total_inr": 53127, ...}
-        Agent->>Agent: Session marked VERIFIED; Order state locked into context
-    end
+    Note over Agent,Tools: Phase B: Caller Verification & Order Hydration
+    Agent->>Tools: lookup_order("89782837", verification_value="4533")
+    Tools-->>Agent: {"found": true, "verified": true, "status": "shipped", "total_inr": 53127}
+    Agent->>Agent: Session marked VERIFIED; Order state locked into context
 
-    rect rgb(255, 250, 240)
-        Note over Agent,RAG: Phase C: Hybrid Retrieval & Precedence Filtering
-        Agent->>RAG: retrieve("cancel shipped order 89782837", top_k=5)
-        RAG->>RAG: Compute Hybrid Score (Dense Cosine + Sparse TF-IDF)
-        RAG->>RAG: Apply Precedence Boost: pol_cancellations.md (CAN-2) > Help > FAQ
-        RAG-->>Agent: Returns top sections: [CAN-2, RET-2, REF-2]
-    end
+    Note over Agent,RAG: Phase C: Hybrid Retrieval & Precedence Filtering
+    Agent->>RAG: retrieve("cancel shipped order 89782837", top_k=5)
+    Agent->>Agent: Hybrid ranking and precedence boost [CAN-2]
+    RAG-->>Agent: Returns top sections: [CAN-2, RET-2, REF-2]
 
-    rect rgb(250, 245, 255)
-        Note over Agent,LLM: Phase D: Grounded Reasoning & Execution
-        Agent->>LLM: Prompt(System Rules + Verified Order 89782837 + [CAN-2] Policy)
-        LLM-->>Agent: Reply: Explains cancellation policy for shipped items under [CAN-2].
-    end
+    Note over Agent,LLM: Phase D: Grounded Reasoning & Execution
+    Agent->>LLM: Prompt(System Rules + Verified Order 89782837 + [CAN-2] Policy)
+    LLM-->>Agent: Reply: Explains cancellation policy for shipped items under [CAN-2].
 
-    rect rgb(255, 245, 245)
-        Note over Agent,TTS: Phase E: Text Normalization & Speech Output
-        Agent->>Agent: Normalizes text (replaces symbols, dates, groups numbers)
-        Agent->>TTS: synthesize(text, voice="Kaveri", model="timbre-v2.5")
-        TTS-->>UI: Synthesized Audio (.wav)
-        UI-->>Customer: Spoken Response Played + Grounded Text & Citations Displayed
-    end
+    Note over Agent,TTS: Phase E: Text Normalization & Speech Output
+    Agent->>Agent: Normalizes text (replaces symbols, dates, groups numbers)
+    Agent->>TTS: synthesize(text, voice="Kaveri", model="timbre-v2.5")
+    TTS-->>UI: Synthesized Audio (.wav)
+    UI-->>Customer: Spoken Response Played + Grounded Text & Citations Displayed
 ```
 
 ---
