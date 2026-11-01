@@ -1,0 +1,1884 @@
+{
+  "summary": {
+    "timestamp": "20261101_210238",
+    "step": 1,
+    "model": "openai/gpt-oss-120b",
+    "mode": "live",
+    "total_questions": 52,
+    "average_combined_score": 0.5144,
+    "must_include_facts_matched": 17,
+    "must_include_facts_total": 58,
+    "must_include_rate": 0.2931,
+    "must_not_include_violations": 0,
+    "decision_match_rate": 0.3846,
+    "decision_matches": 20
+  },
+  "results": [
+    {
+      "id": "PQ0002",
+      "language": "hi-en",
+      "intent": "warranty",
+      "must_include": {
+        "score": 1.0,
+        "total": 2,
+        "matched": 2,
+        "details": [
+          {
+            "fact": "12",
+            "found": true
+          },
+          {
+            "fact": "My Orders / app",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 1.0,
+      "question": "SKU ELE-0012 pe ZentroMart Assured hai kya? Claim kaise karein?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ—एक कृत्रिम बुद्धिमत्ता, मानव नहीं।  \n\n**ZentroMart Assured**  \nZentroMart Assured का मतलब है कि उत्पाद हमारी गुणवत्ता‑गुarantी, तेज़ डिलीवरी और आसान रिटर्न के साथ आता है। किसी SKU (जैसे ELE‑0012) के Assured होने की पुष्टि के लिए हमें उत्पाद का नाम या विवरण चाहिए, क्योंकि मेरे पास रीयल‑टाइम इन्वेंट्री डेटा नहीं है।\n\n**Assured उत्पाद के लिए क्लेम करने की सामान्य प्रक्रिया**  \n\n1. **ऑर्डर विवरण तैयार रखें** – ऑर्डर नंबर, इनवॉइस, और समस्या (जैसे डैमेज, गलत आइटम, या कमी) का स्क्रीनशॉट।  \n2. **ZentroMart ऐप/वेबसाइट पर “My Orders” में जाएँ** और संबंधित ऑर्डर चुनें।  \n3. **“Report Issue” या “Request Return/Refund”** बटन पर क्लिक करें।  \n4. समस्या का प्रकार चुनें (डैमेज्ड, गलत प्रोडक्ट, आदि) और आवश्यक फोटो/दस्तावेज़ अपलोड करें।  \n5. **विवरण लिखें** – क्या हुआ, कब मिला, और आप क्या चाहते हैं (रिफंड, रिप्लेसमेंट, या रिटर्न)।  \n6. **सबमिट करें** – हमारी टीम 2‑3 कार्यदिवसों के भीतर आपके केस की समीक्षा करेगी और आपको ई‑मेल/ऐप नोटिफिकेशन के माध्यम से अपडेट करेगी।  \n\nयदि आप अभी भी सुनिश्चित नहीं हैं कि ELE‑0012 Assured है या नहीं, तो कृपया उत्पाद का पूरा नाम या कोई अतिरिक्त विवरण (जैसे ब्रांड, मॉडल) बताइए, ताकि मैं आपको बेहतर जानकारी दे सकूँ। आवश्यकता पड़ने पर मैं आपको हमारे मानव समर्थन एजेंट से जोड़ भी सकता हूँ।",
+      "reference_answer": "Haan, 12 mahine ki Assured warranty hai; claim app mein My Orders se karein."
+    },
+    {
+      "id": "PQ0003",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "instant / 2 hours / two hours / तुरंत / turant",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 2,
+        "violations": 0,
+        "details": [
+          {
+            "phrase": "5 to 7 days",
+            "found": false
+          },
+          {
+            "phrase": "5-7 days",
+            "found": false
+          }
+        ]
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "How fast are refunds to the ZentroMart Wallet?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nRefunds to the ZentroMart Wallet are usually processed within a few business days after the return or cancellation is approved. The exact timing can vary slightly depending on the payment method and bank processing times.\n\nIf you have a specific order in mind, could you share the order ID? That will help me give you more precise information or guide you on the next steps.",
+      "reference_answer": "Instant, within 2 hours of initiation."
+    },
+    {
+      "id": "PQ0004",
+      "language": "en",
+      "intent": "unsupported",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "don't have / do not have / not sure / no information / can't find / not able to find / couldn't find / जानकारी नहीं / pata nahi / jaankari nahi / connect / सहयोगी",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer",
+          "escalate"
+        ],
+        "detected": "escalate",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "Can I schedule a delivery at midnight?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nOur standard delivery slots run between 8 AM and 9 PM. Midnight deliveries aren’t offered at the moment. If you need a specific time, you can choose any available slot within the regular window when you place the order, or you can select “Leave at doorstep” for after‑hours delivery.\n\nIf you already have an order and want to adjust its delivery time, could you share the order number? I’ll let you know the options we have for that order.",
+      "reference_answer": "Sorry, I don't have information about that. I can connect you to a colleague who can help."
+    },
+    {
+      "id": "PQ0005",
+      "language": "hi-en",
+      "intent": "warranty",
+      "must_include": {
+        "score": 0.5,
+        "total": 2,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "12",
+            "found": true
+          },
+          {
+            "fact": "My Orders / app",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.75,
+      "question": "SKU ELE-0002 pe ZentroMart Assured hai kya? Claim kaise karein?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक कृत्रिम बुद्धिमत्ता हूँ, मानव नहीं)।  \n\n**ELE-0002** के बारे में:\n- यदि वह “ZentroMart Assured” टैग के साथ दिख रहा है, तो इसका मतलब है कि उत्पाद हमारी गुणवत्ता‑गारंटी के तहत आता है।  \n- गारंटी या क्लेम करने के लिए आपको नीचे दिए गए चरणों का पालन करना होगा:\n\n1. **ऑर्डर जानकारी तैयार रखें** – ऑर्डर आईडी, खरीदारी की तिथि और उत्पाद का फोटो (यदि क्षतिग्रस्त या गलत है)।  \n2. **ZentroMart सपोर्ट से संपर्क करें** –  \n   - ऐप/वेबसाइट पर “सहायता” → “ऑर्डर सहायता” → “गुणवत्ता/गारंटी क्लेम” चुनें, या  \n   - हमारे 24‑घंटे हेल्पलाइन 1800‑123‑4567 पर कॉल करें।  \n3. प्रतिनिधि को उपरोक्त जानकारी दें; वे आपको रिटर्न लेबल भेजेंगे या आवश्यक आगे की प्रक्रिया बताएँगे।  \n4. उत्पाद को मूल पैकेज में सुरक्षित करके भेजें; प्राप्ति के बाद रिफंड/रिप्लेसमेंट आपके मूल भुगतान विधि में किया जाएगा।\n\nयदि आपके पास अभी ऑर्डर आईडी नहीं है या कोई और सवाल है, तो कृपया वह जानकारी साझा करें ताकि मैं आपको और बेहतर मदद कर सकूँ।",
+      "reference_answer": "Haan, 12 mahine ki Assured warranty hai; claim app mein My Orders se karein."
+    },
+    {
+      "id": "PQ0006",
+      "language": "en",
+      "intent": "return_fee",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "no / not / waived / free",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 1,
+        "violations": 0,
+        "details": [
+          {
+            "phrase": "₹49 will be charged",
+            "found": false
+          }
+        ]
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "As a ZentroMart Plus member, will I be charged the pickup fee for returning shoes I just don't like?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nAs a ZentroMart Plus member, you are generally eligible for **free pickup on returns**, including items like shoes, provided the return meets the standard return conditions (e.g., within the allowed return window and in sellable condition).  \n\nIf your shoes are still within that window and you’d like to arrange a pickup, I can help you start the process. Could you please share the order number and the date you received the shoes? That will let me confirm the eligibility and set up the pickup for you.",
+      "reference_answer": "No. ZentroMart Plus members pay no reverse pickup fee."
+    },
+    {
+      "id": "PQ0008",
+      "language": "hi-en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "2026-10-27 / 27 October 2026 / 27 अक्टूबर 2026",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "credit card wala refund 17 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक इंसान नहीं, बल्कि एक कृत्रिम बुद्धिमत्ता हूँ)।\n\nआपके क्रेडिट‑कार्ड रिफंड के बारे में: आम तौर पर रिफंड बैंक के प्रोसेसिंग समय के कारण **5‑10 कार्यदिवस** में आपके कार्ड में दिख जाता है। चूँकि आपका रिफंड 17 Oct 2026 को शुरू हुआ है, तो आज 20 Oct 2026 के बाद के अगले 5‑10 कार्यदिवस (अर्थात लगभग 25 Oct से 31 Oct के बीच) तक यह आपके खाते में दिखना चाहिए।\n\nयदि इस अवधि के बाद भी रिफंड नहीं आया, तो कृपया अपना **ऑर्डर आईडी** या **भुगतान रसीद** साझा करें, ताकि मैं आपको आगे की सहायता के लिए मानव सहयोगी से जोड़ सकूँ।",
+      "reference_answer": "24 October 2026 se 27 October 2026 ke beech; Sunday aur warehouse holidays nahi gine jaate."
+    },
+    {
+      "id": "PQ0009",
+      "language": "en",
+      "intent": "unsupported",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "don't have / do not have / not sure / no information / can't find / not able to find / couldn't find / जानकारी नहीं / pata nahi / jaankari nahi / connect / सहयोगी",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer",
+          "escalate"
+        ],
+        "detected": "escalate",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "Is there a student discount?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (I’m a virtual assistant, not a human).\n\nAt the moment we don’t have a dedicated, ongoing student discount program. However, we do run periodic promotions and our ZentroMart Plus membership often includes extra savings, free delivery, and early access to sales, which many students find useful.\n\nIf you’d like, I can let you know about any current promotions or help you explore the Plus membership benefits. Just let me know!",
+      "reference_answer": "Sorry, I don't have information about that. I can connect you to a colleague who can help."
+    },
+    {
+      "id": "PQ0010",
+      "language": "en",
+      "intent": "return_fee",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "free / no fee / waived / no charge",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "Is the collection free if the UrbanThread Slim Fit Jeans came torn?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nIf you receive a product—such as the UrbanThread Slim Fit Jeans—in a damaged condition, the return pickup is typically free of charge. You’ll just need to let us know the issue, and we’ll arrange a collection at no cost to you.\n\nTo start the return, could you please share your order number and a brief photo of the torn jeans? That will help us process the free pickup quickly. If you prefer, I can also connect you with a human colleague.",
+      "reference_answer": "Yes. No fee applies for damaged or wrong items. Report it within 48 hours with photos."
+    },
+    {
+      "id": "PQ0013",
+      "language": "hi",
+      "intent": "return_eligibility",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "सील / seal / बंद / खुला",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "मैंने Gulmohar Matte Lipstick खोल लिया है, क्या अब भी वापस कर सकती हूँ?",
+      "answer": "मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक मानव नहीं हूँ)।  \n\nआपके प्रश्न के लिए मुझे कुछ अतिरिक्त जानकारी चाहिए ताकि मैं सही दिशा में मदद कर सकूँ:\n\n1. आपका ऑर्डर आईडी या खरीदारी की तिथि क्या है?  \n2. क्या लिपस्टिक की पैकेजिंग अभी भी सील है, या केवल उत्पाद ही खोला गया है?  \n\nआम तौर पर, खुले हुए कॉस्मेटिक उत्पादों को केवल तब ही रिटर्न स्वीकार किया जाता है जब वे दोषपूर्ण हों। यदि आपके पास रसीद या ऑर्डर विवरण है, तो कृपया वह जानकारी साझा करें, या मैं आपको हमारे मानव सहयोगी से जोड़ सकता हूँ।",
+      "reference_answer": "नहीं, ब्यूटी प्रोडक्ट सिर्फ़ बिना खोले, सील के साथ ही वापस होते हैं।"
+    },
+    {
+      "id": "PQ0014",
+      "language": "hi",
+      "intent": "return_window",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "10",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 1.0,
+      "question": "मुझे Pagecraft A5 Ruled Notebook (Pack of 4) लौटाने के लिए कितने दिन मिलेंगे?",
+      "answer": "नमस्ते! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ, मानव नहीं हूँ।  \n\nPagecraft A5 Ruled Notebook (Pack of 4) जैसे सामान्य गैर‑खाद्य उत्पादों के लिए ZentroMart आम तौर पर डिलीवरी के **10 दिन** के भीतर रिटर्न स्वीकार करता है, बशर्ते उत्पाद अनखुला, मूल पैकेज में और वापसी की शर्तों को पूरा करता हो।  \n\nयदि आपका ऑर्डर अभी भी इस अवधि में है और नोटबुक में कोई नुकसान या त्रुटि नहीं है, तो आप रिटर्न प्रक्रिया शुरू कर सकते हैं:\n\n1. **ऑर्डर आईडी** और **डिलीवरी तिथि** की पुष्टि करें।  \n2. ZentroMart ऐप या वेबसाइट पर “My Orders” में जाएँ, संबंधित ऑर्डर चुनें और “Return/Refund” विकल्प चुनें।  \n3. रिटर्न कारण चुनें (जैसे “सामान नहीं चाहिए” या “उत्पाद में दोष”) और रिटर्न लेबल जनरेट करें।  \n4. पैकेज को मूल बॉक्स में रखें, रिटर्न लेबल चिपकाएँ और निकटतम कूरियर पिक‑अप के लिए शेड्यूल करें।\n\nयदि आपको रिटर्न लेबल जनरेट करने में कोई समस्या आती है या रिटर्न अवधि समाप्त हो गई है, तो कृपया मुझे ऑर्डर आईडी और डिलीवरी तिथि बताइए, मैं आगे की सहायता के लिए आपको हमारे मानव समर्थन टीम से जोड़ दूँगा।",
+      "reference_answer": "डिलीवरी के 10 दिन के अंदर लौटा सकते हैं।"
+    },
+    {
+      "id": "PQ0015",
+      "language": "hi-en",
+      "intent": "unsupported",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "don't have / do not have / not sure / no information / can't find / not able to find / couldn't find / जानकारी नहीं / pata nahi / jaankari nahi / connect / सहयोगी",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer",
+          "escalate"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "Bulk order pe GST invoice milega kya?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं इंसान नहीं हूँ)।  \n\nहाँ, आप बड़े ऑर्डर के लिए GST‑इनवॉइस प्राप्त कर सकते हैं। इसके लिए हमें आपके कंपनी का नाम, GSTIN (PAN सहित) और बिलिंग पता चाहिए होगा। आम तौर पर 10 हज़ार रुपये से ऊपर के ऑर्डर पर GST‑इनवॉइस जारी की जाती है, लेकिन सटीक प्रक्रिया आपके ऑर्डर के विवरण पर निर्भर करती है।\n\nयदि आप अभी ऑर्डर कर रहे हैं, तो चेक‑आउट के दौरान “GST इनवॉइस प्राप्त करें” विकल्प चुनें और आवश्यक जानकारी भरें। यदि ऑर्डर पहले से दिया गया है, तो कृपया अपना ऑर्डर नंबर और कंपनी विवरण बताएं, ताकि हम आगे की प्रक्रिया में आपका मार्गदर्शन कर सकें।  \n\nऔर कोई सवाल हो तो बताइए!",
+      "reference_answer": "Sorry, iske baare mein mere paas jaankari nahi hai. Main aapko ek colleague se connect kar sakti hoon."
+    },
+    {
+      "id": "PQ0016",
+      "language": "en",
+      "intent": "return_eligibility",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "unopened / seal / sealed",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "I opened the Neelam Eau de Parfum 50 ml and tried it once. Can I still return it?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nGenerally, for cosmetics and fragrances we can accept a return only if the item is defective or damaged, not simply because you’ve tried it. Since the Neelam Eau de Parfum has been opened, a standard return may not be possible unless there is an issue with the product.\n\nIf you believe the perfume is defective or you received the wrong item, could you please share your order number and a brief description of the problem? I’ll let you know the next steps or connect you with a human colleague for further assistance.",
+      "reference_answer": "Beauty products can be returned only if unopened with the seal intact, so an opened one can't be returned."
+    },
+    {
+      "id": "PQ0018",
+      "language": "hi",
+      "intent": "return_window",
+      "must_include": {
+        "score": 1.0,
+        "total": 0,
+        "matched": 0,
+        "details": []
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "clarify",
+        "acceptable": [
+          "clarify"
+        ],
+        "detected": "answer",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "कितने दिन में वापस करना होगा?",
+      "answer": "नमस्ते! मैं ज़ेंट्रोमार्ट का AI ग्राहक सहायता सहायक हूँ (मैं इंसान नहीं हूँ)।  \n\nवापसी की समय सीमा आपके ऑर्डर की शर्तों और उत्पाद के प्रकार पर निर्भर करती है। आम तौर पर, डिलीवरी के बाद जल्द‑से‑जल्द और हमारी रिटर्न पॉलिसी में बताए गए समय के भीतर वापसी का अनुरोध करना आवश्यक होता है।  \n\nसटीक जानकारी देने के लिए कृपया बताएं:\n\n- आप किस उत्पाद की बात कर रहे हैं?  \n- ऑर्डर की डिलीवरी तिथि कब थी?  \n\nइन विवरणों के साथ मैं आपको सही वापसी अवधि और प्रक्रिया के बारे में मार्गदर्शन कर सकूँगा। यदि आप चाहें तो हमारी रिटर्न पॉलिसी का लिंक भी भेज सकता हूँ।",
+      "reference_answer": "कौन सा सामान है, यह पूछें।"
+    },
+    {
+      "id": "PQ0019",
+      "language": "en",
+      "intent": "return_window",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "10",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "My Orbix Fit 3 Pro Smartwatch was delivered on 20 July. What was the return window for it?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nI don’t have access to the specific return policy for the Orbix Fit 3 Pro smartwatch you received on 20 July. Could you please provide the order number or any reference details? With that information I can let you know the exact return window, or I can connect you with a human colleague who can look it up for you.",
+      "reference_answer": "Electronics delivered before 1 August 2026 keep the 10-day window, so it was 10 days from 20 July."
+    },
+    {
+      "id": "PQ0020",
+      "language": "hi",
+      "intent": "return_window",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "15",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "मुझे Sootra Canvas Tote Bag लौटाने के लिए कितने दिन मिलेंगे?",
+      "answer": "नमस्ते! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं इंसान नहीं हूँ)।  \n\nSootra Canvas Tote Bag को लौटाने के लिए उपलब्ध रिटर्न अवधि के बारे में मेरे पास सटीक संख्या नहीं है। आम तौर पर ZentroMart की रिटर्न नीति में डिलीवरी के कुछ दिनों (जैसे 30 दिन) के भीतर आइटम लौटाने की अनुमति होती है, लेकिन सटीक अवधि आपके ऑर्डर की शर्तों पर निर्भर कर सकती है।\n\nसटीक जानकारी के लिए आप:\n\n1. ZentroMart की वेबसाइट पर **रिटर्न नीति** पेज देख सकते हैं, या  \n2. मैं आपको हमारे मानव समर्थन प्रतिनिधि से जोड़ दूँ, जो आपके विशेष ऑर्डर के आधार पर सटीक अवधि बता पाएँगे।\n\nआपको कौन‑सा विकल्प बेहतर लगेगा?",
+      "reference_answer": "डिलीवरी के 15 दिन के अंदर लौटा सकते हैं। 1 से 15 अक्टूबर की फ़ेस्टिव सेल के ऑर्डर पर 30 दिन मिलते हैं।"
+    },
+    {
+      "id": "PQ0021",
+      "language": "en",
+      "intent": "delivery_attempts",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "3",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "What happens if I'm not home when the courier comes?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (I’m a virtual assistant, not a human).\n\nIf you’re not home when the courier arrives, they will usually:\n\n1. **Make a second delivery attempt** on the next business day.  \n2. **Leave a delivery slip** with instructions on how to reschedule or pick up the package from the nearest courier hub.  \n3. **Leave the parcel at a safe location** (e.g., a porch or reception) only if you have previously authorized this option in your delivery preferences.\n\nYou can also log in to your ZentroMart account and use the “Track Order” page to:\n\n- Choose a new delivery date or time slot.  \n- Select “Pick‑up from courier office” if that’s more convenient.  \n- Add delivery instructions (e.g., “Leave with neighbor” or “Ring the bell”).\n\nIf you need help updating the delivery preferences for a specific order, please share the order ID so I can guide you further, or you can contact our live‑chat/human support team.",
+      "reference_answer": "The courier tries up to 3 times; after the third failed attempt the parcel goes back to the warehouse."
+    },
+    {
+      "id": "PQ0022",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "2026-10-27 / 27 October 2026 / 27 अक्टूबर 2026",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "My refund to credit card was started on 17 October 2026. By which date should I have it?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).\n\nRefunds to credit cards are usually processed within 5‑10 business days after the refund is initiated. Since your refund was started on 17 October 2026, you can typically expect the amount to appear on your card statement between 22 October and 31 October 2026 (depending on your bank’s processing time).\n\nIf you don’t see the credit by the end of this window, please let me know your order number so I can arrange for a human colleague to look into it for you.",
+      "reference_answer": "Between 24 October 2026 and 27 October 2026, counting business days: Monday to Saturday, skipping warehouse holidays."
+    },
+    {
+      "id": "PQ0023",
+      "language": "en",
+      "intent": "fraud",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "ticket / colleague / human / team / connect / टिकट / सहयोगी",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "escalate",
+        "acceptable": [
+          "escalate"
+        ],
+        "detected": "escalate",
+        "matched": true
+      },
+      "combined_score": 1.0,
+      "question": "There's an order on my account that I never placed.",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human). I’m sorry to hear that an unfamiliar order appears on your account.\n\nI don’t have access to order details, so could you please share the **order number** and the **date** it was placed? With that information I can guide you on the next steps, or connect you to a human colleague who can investigate and secure your account.",
+      "reference_answer": "That needs urgent attention. I'm creating a ticket and connecting you to a colleague who handles account security."
+    },
+    {
+      "id": "PQ0024",
+      "language": "en",
+      "intent": "return_window",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "15",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "How long do I get to send back the Rangoli Cotton Straight Kurta?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nI don’t have access to the specific return window for the Rangoli Cotton Straight Kurta, as the exact policy can vary by product and purchase date. Generally, ZentroMart allows returns within the period stated in our Return Policy, which you can view on the website or in your order confirmation email.\n\nIf you can share the order number or the date you received the kurta, I can guide you on the next steps, or I can connect you with a human colleague who can look up the exact timeframe for you. Let me know how you’d like to proceed!",
+      "reference_answer": "You can return it within 15 days of delivery. Orders placed in the 1 to 15 October festive sale get 30 days."
+    },
+    {
+      "id": "PQ0025",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.5,
+        "total": 2,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "3",
+            "found": false
+          },
+          {
+            "fact": "5",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 2,
+        "violations": 0,
+        "details": [
+          {
+            "phrase": "5 to 7 days",
+            "found": false
+          },
+          {
+            "phrase": "5-7 days",
+            "found": false
+          }
+        ]
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.5,
+      "question": "If I paid with net banking, how soon will the refund show up?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nRefunds to a net‑banking account are usually processed within **5–7 business days** after we issue the refund. The exact time you see the amount may vary depending on your bank’s processing schedule.\n\nIf you’d like to check the status of a specific refund, could you please share your order ID? I’ll let you know the next steps or connect you with a human colleague if needed.",
+      "reference_answer": "3 to 5 business days after the refund is initiated."
+    },
+    {
+      "id": "PQ0026",
+      "language": "en",
+      "intent": "warranty",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "12",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "What warranty comes with the Voltra PowerCell 10000 mAh Power Bank, Green (SKU ELE-0008)?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nThe Voltra PowerCell 10000 mAh Power Bank (SKU ELE‑0008) is typically covered by a **manufacturer’s warranty of one year** against manufacturing defects. The warranty does not cover accidental damage, misuse, or normal wear and tear.  \n\nFor the exact terms (e.g., claim process, required documents) you can:\n\n* Check the product’s detail page on ZentroMart, where the warranty information is listed, or  \n* Contact our support team with your order number, and they’ll provide the specific warranty documentation.\n\nLet me know if you’d like help locating the product page or anything else!",
+      "reference_answer": "A 12-month ZentroMart Assured warranty plus the 6-month brand warranty."
+    },
+    {
+      "id": "PQ0027",
+      "language": "hi-en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "2026-10-15 / 15 October 2026 / 15 अक्टूबर 2026",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "UPI wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं इंसान नहीं हूँ)।  \n\nUPI के माध्यम से किया गया रिफंड आमतौर पर 3‑5 व्यावसायिक दिनों में आपके बैंक खाते में दिखता है, और कभी‑कभी अधिकतम 7 व्यावसायिक दिनों तक लग सकते हैं। यदि आपका रिफंड 12 अक्टूबर 2026 को शुरू हुआ है, तो आज 20 अक्टूबर 2026 तक इसे मिलना चाहिए।  \n\nयदि अभी तक रिफंड नहीं आया है, तो कृपया हमें निम्नलिखित जानकारी दें ताकि हम आगे जांच कर सकें:\n\n1. आपका ऑर्डर नंबर (यदि उपलब्ध हो)  \n2. रिफंड की राशि  \n3. वह UPI आईडी/वर्चुअल पेमेंट एड्रेस जिसका उपयोग किया गया था  \n\nइन विवरणों के साथ आप हमारे मानव सहयोगी से भी संपर्क कर सकते हैं। मैं और कैसे मदद कर सकता हूँ?",
+      "reference_answer": "13 October 2026 se 15 October 2026 ke beech; Sunday aur warehouse holidays nahi gine jaate."
+    },
+    {
+      "id": "PQ0028",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "2026-10-21 / 21 October 2026 / 21 अक्टूबर 2026",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "My refund to net banking was started on 14 October 2026. By which date should I have it?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).\n\nRefunds to net‑banking accounts are typically processed within 5‑7 business days after the refund is initiated. Since your refund was started on 14 October 2026, you can expect it to appear in your bank account by around 21–23 October 2026 (weekends are not counted as business days).\n\nIf you do not see the amount by then, please let me know any reference number you have, and I can guide you on the next steps or connect you with a human colleague.",
+      "reference_answer": "Between 17 October 2026 and 21 October 2026, counting business days: Monday to Saturday, skipping warehouse holidays."
+    },
+    {
+      "id": "PQ0029",
+      "language": "hi-en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "2026-10-21 / 21 October 2026 / 21 अक्टूबर 2026",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "credit card wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक कृत्रिम बुद्धिमत्ता हूँ, इंसान नहीं)।  \n\nआपके द्वारा बताई गई जानकारी के अनुसार, आपका क्रेडिट‑कार्ड रिफंड 12 October 2026 को शुरू हुआ है। आम तौर पर, क्रेडिट‑कार्ड रिफंड को बैंक के प्रोसेसिंग में 7‑10 व्यावसायिक दिन लगते हैं। इसलिए, यदि सब कुछ सामान्य है तो रिफंड 20 October 2026 के आसपास आपके खाते में दिखना चाहिए।\n\nयदि इस तारीख तक रिफंड नहीं आया है, तो आप:\n\n1. अपने बैंक/कार्ड जारीकर्ता से रिफंड स्टेटस पूछें।  \n2. यहाँ फिर से संपर्क करके हमें बताएं—हम आपको आगे की जाँच या मानव एजेंट से जोड़ने में मदद करेंगे।  \n\nक्या मैं आपको किसी और चीज़ में मदद कर सकता/सकती हूँ?",
+      "reference_answer": "17 October 2026 se 21 October 2026 ke beech; Sunday aur warehouse holidays nahi gine jaate."
+    },
+    {
+      "id": "PQ0030",
+      "language": "en",
+      "intent": "damaged_item",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "ticket / colleague / team / Priority Resolution",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 3,
+        "violations": 0,
+        "details": [
+          {
+            "phrase": "has been approved",
+            "found": false
+          },
+          {
+            "phrase": "I've approved",
+            "found": false
+          },
+          {
+            "phrase": "I have arranged a replacement",
+            "found": false
+          }
+        ]
+      },
+      "decision": {
+        "expected": "escalate",
+        "acceptable": [
+          "escalate"
+        ],
+        "detected": "escalate",
+        "matched": true
+      },
+      "combined_score": 1.0,
+      "question": "The Kestrel Book 14 Laptop (SKU ELE-0023) I received yesterday has a crack. I want it sorted.",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human). I’m sorry to hear that the Kestrel Book 14 Laptop you received has a crack.\n\nTo help you resolve this quickly, could you please provide:\n\n1. Your order number (or the email address you used for the purchase).  \n2. A clear photo of the damage (if possible).  \n\nWith that information I can start the return/replacement process or connect you with a human colleague who can finalize the solution. Thank you!",
+      "reference_answer": "It's worth more than ₹10,000, so create a ticket and hand over to the Priority Resolution team."
+    },
+    {
+      "id": "PQ0031",
+      "language": "en",
+      "intent": "troubleshooting",
+      "must_include": {
+        "score": 0.5,
+        "total": 2,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "30",
+            "found": true
+          },
+          {
+            "fact": "10",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.5,
+      "question": "My Bluetooth speaker won't turn on at all.",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human). I’m sorry to hear your Bluetooth speaker isn’t turning on.\n\nTo help you best, could you let me know:\n\n1. The exact model name of the speaker (as shown on the product page or packaging).  \n2. When you purchased it (order date or approximate month).  \n3. Whether you’ve tried any basic steps such as charging the speaker for at least 30 minutes, using a different charger/cable, or holding the power button for a longer press?\n\nWith that information I can guide you through troubleshooting or check the warranty options for a replacement or repair. If you prefer to speak with a human agent, just let me know and I’ll arrange that.",
+      "reference_answer": "Charge it for 30 minutes with the original cable, then hold power for 10 seconds."
+    },
+    {
+      "id": "PQ0032",
+      "language": "hi-en",
+      "intent": "warranty",
+      "must_include": {
+        "score": 0.0,
+        "total": 2,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "12",
+            "found": false
+          },
+          {
+            "fact": "My Orders / app",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "SKU ELE-0003 pe ZentroMart Assured hai kya? Claim kaise karein?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक कृत्रिम बुद्धिमत्ता हूँ, मानव नहीं)।  \n\n**ELE‑0003** के बारे में:  \n- यदि यह “ZentroMart Assured” लेबल के साथ दिख रहा है, तो इसका मतलब है कि उत्पाद हमारी गुणवत्ता‑गारंटी के तहत आता है।  \n- असंतोष या दोष की स्थिति में आप **क्लेम** कर सकते हैं।\n\n**क्लेम करने की सामान्य प्रक्रिया**:\n\n1. **ऑर्डर जानकारी तैयार रखें** – ऑर्डर आईडी, खरीदारी की तिथि और SKU (ELE‑0003)।  \n2. **समस्या का विवरण लिखें** – क्या उत्पाद क्षतिग्रस्त है, गलत आइटम आया है, या कोई अन्य समस्या है।  \n3. **फ़ोटो/वीडियो संलग्न करें** – यदि उत्पाद में दिखने वाला नुकसान है तो तस्वीरें जोड़ें; यह प्रक्रिया को तेज़ बनाता है।  \n4. **ZentroMart ऐप/वेबसाइट पर “मदद” या “ऑर्डर ट्रैकिंग” सेक्शन में जाएँ**  \n   - संबंधित ऑर्डर चुनें → “रिटर्न/रिप्लेसमेंट/क्लेम” पर क्लिक करें → ऊपर लिखी जानकारी भरें।  \n5. **सबमिट करने के बाद** आपको एक रिफ़ंड/रिप्लेसमेंट अनुरोध का पुष्टि संदेश मिलेगा। हमारी टीम 2‑3 कार्यदिवसों में जांच करेगी और आगे की कार्रवाई (रिफ़ंड, बदलाव या संग्रह) की सूचना देगी।  \n\nयदि आप अभी भी कोई कठिनाई महसूस कर रहे हैं या ऊपर के चरणों में मदद चाहिए, तो कृपया अपना **ऑर्डर आईडी** और समस्या का संक्षिप्त विवरण बताइए, मैं आगे की मार्गदर्शन कर दूँगा।",
+      "reference_answer": "Haan, 12 mahine ki Assured warranty hai; claim app mein My Orders se karein."
+    },
+    {
+      "id": "PQ0033",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "2026-10-24 / 24 October 2026 / 24 अक्टूबर 2026",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "My refund to net banking was started on 17 October 2026. By which date should I have it?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nRefunds to net‑banking accounts are usually processed within **5‑7 business days** from the date the refund is initiated. Since your refund was started on **17 October 2026**, you can expect the amount to appear in your bank account by **24 – 26 October 2026** (weekends are not counted as business days).\n\nIf the amount is not credited by then, please let us know your order number and the bank you used, and we’ll help you investigate further.",
+      "reference_answer": "Between 22 October 2026 and 24 October 2026, counting business days: Monday to Saturday, skipping warehouse holidays."
+    },
+    {
+      "id": "PQ0034",
+      "language": "en",
+      "intent": "delivery_area",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "only within India / only in India / India",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "Can you deliver to Dubai?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).\n\nAt the moment, ZentroMart ships only within India, so we can’t deliver to Dubai. If you have any other questions or need help with something else, just let me know!",
+      "reference_answer": "No, deliveries are only within India."
+    },
+    {
+      "id": "PQ0035",
+      "language": "hi-en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "2026-10-17 / 17 October 2026 / 17 अक्टूबर 2026",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "net banking wala refund 12 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक कृत्रिम बुद्धिमत्ता हूँ, इंसान नहीं)।  \n\nनेट‑बैंकिंग के माध्यम से किए गए रिफंड आमतौर पर **5‑7 कार्यदिवस** में आपके बैंक खाते में दिखने लगते हैं, लेकिन कुछ मामलों में बैंक की प्रक्रिया के कारण यह **10 कार्यदिवस** तक भी लग सकता है।  \n\nयदि आपका रिफंड 12 अक्टूबर 2026 को शुरू हुआ है, तो आज 20 अक्टूबर 2026 तक लगभग 6‑7 कार्यदिवस बीत चुके हैं। आमतौर पर इस समय के भीतर रिफंड आपके खाते में दिखना चाहिए।  \n\n- यदि अभी भी रिफंड नहीं आया है, तो कृपया अपने बैंक के स्टेटमेंट में “ZentroMart” या संबंधित लेन‑देन विवरण देखें।  \n- यदि फिर भी नहीं दिखता, तो हमें अपना **ऑर्डर आईडी** और **भुगतान का विवरण** (जैसे ट्रांज़ैक्शन रेफ़रेंस) बताएं, ताकि हम आगे की जाँच के लिए आपको मानव सहयोगी से जोड़ सकें।  \n\nधन्यवाद! 🙏",
+      "reference_answer": "15 October 2026 se 17 October 2026 ke beech; Sunday aur warehouse holidays nahi gine jaate."
+    },
+    {
+      "id": "PQ0036",
+      "language": "en",
+      "intent": "return_eligibility",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "cannot / can't / not returnable / non-returnable / नहीं / nahi / nahin / not be returned",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "The Comfi One-piece Swimsuit doesn't fit. Can I send it back?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).\n\nI’m sorry the Comfi One‑piece Swimsuit doesn’t fit. You can return it, provided it’s in its original condition with tags and packaging.\n\n**Typical return steps:**\n1. Locate your order number (you’ll find it in the confirmation email or in your ZentroMart account).  \n2. Log in to your account, go to **My Orders**, select the swimsuit, and click **Request Return**.  \n3. Choose a reason (e.g., “size/fit issue”) and follow the on‑screen instructions to generate a prepaid return label.  \n4. Pack the item securely, attach the label, and drop it off at the nearest courier point.\n\nIf the order is older than the standard return window or the item shows signs of use, the return may be declined. Since I don’t have access to your specific order details, could you please share the order number (or let me know if you need help finding it)? I’ll guide you through the next steps.",
+      "reference_answer": "Innerwear and swimwear can't be returned for fit or change of mind."
+    },
+    {
+      "id": "PQ0037",
+      "language": "hi",
+      "intent": "unsupported",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "don't have / do not have / not sure / no information / can't find / not able to find / couldn't find / जानकारी नहीं / pata nahi / jaankari nahi / connect / सहयोगी",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer",
+          "escalate"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "क्या आपकी कोई दुकान कोच्चि में है?",
+      "answer": "नमस्ते! मैं ज़ेंट्रोमार्ट का AI ग्राहक सहायता सहायक हूँ—मैं एक कृत्रिम बुद्धिमत्ता हूँ, मानव नहीं।  \n\nवर्तमान में ज़ेंट्रोमार्ट केवल ऑनलाइन प्लेटफ़ॉर्म के माध्यम से ही काम करता है और हमारे पास कोच्चि या किसी अन्य शहर में कोई भौतिक स्टोर नहीं है। आप हमारी वेबसाइट या मोबाइल ऐप से सभी उत्पाद देख, ऑर्डर कर और डिलीवरी का लाभ उठा सकते हैं।  \n\nक्या मैं आपकी किसी और चीज़ में मदद कर सकता हूँ?",
+      "reference_answer": "माफ़ कीजिए, मेरे पास इस बारे में जानकारी नहीं है। मैं आपको किसी सहयोगी से जोड़ सकती हूँ।"
+    },
+    {
+      "id": "PQ0039",
+      "language": "en",
+      "intent": "return_eligibility",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "cannot / can't / not returnable / non-returnable / नहीं / nahi / nahin / not be returned",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "The Comfi Cotton Briefs (Pack of 3) doesn't fit. Can I send it back?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nI’m sorry the Comfi Cotton Briefs (Pack of 3) don’t fit. You can return them, provided the return request is made within the applicable return window and the items are in their original condition with all tags and packaging.\n\nTo guide you through the return process, could you please share:\n\n1. Your order number (or the email address used for the purchase)  \n2. The date you received the package  \n\nOnce I have that information, I’ll give you the exact steps to initiate the return and arrange a refund or exchange. If you’d prefer to speak with a human agent, just let me know and I’ll connect you.",
+      "reference_answer": "Innerwear and swimwear can't be returned for fit or change of mind."
+    },
+    {
+      "id": "PQ0040",
+      "language": "hi",
+      "intent": "cancel_order",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "मना / refuse / नहीं",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 1.0,
+      "question": "ऑर्डर शिप हो गया है, क्या अब कैंसिल हो सकता है?",
+      "answer": "नमस्ते! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक कृत्रिम बुद्धिमत्ता हूँ, मानव नहीं)।  \n\nऑर्डर शिप हो जाने के बाद, उसे सिस्टम में सीधे कैंसिल करना संभव नहीं है। यदि आपको अब भी ऑर्डर रद्द करना है, तो आप डिलीवरी के बाद हमारी रिटर्न प्रक्रिया के तहत वस्तु को वापस भेज सकते हैं और रिफंड प्राप्त कर सकते हैं।  \n\nक्या आप अपना ऑर्डर आईडी या अन्य विवरण साझा कर सकते हैं, ताकि मैं आपको अगला कदम (जैसे रिटर्न अनुरोध शुरू करना) समझा सकूँ? यदि आप चाहें तो मैं आपको हमारे मानव समर्थन एजेंट से भी जोड़ सकता हूँ।",
+      "reference_answer": "शिप होने के बाद कैंसिल नहीं होता, पर डिलीवरी पर पार्सल लेने से मना कर सकते हैं।"
+    },
+    {
+      "id": "PQ0041",
+      "language": "en",
+      "intent": "warranty",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "12",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "What warranty comes with the Nimbus X2 Pro Wireless Earbuds, Blue (SKU ELE-0003)?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nFor the **Nimbus X2 Pro Wireless Earbuds, Blue (SKU ELE‑0003)**, ZentroMart generally offers the manufacturer’s standard warranty that comes with the product. The exact duration and coverage (e.g., defects in materials or workmanship) are listed on the product page under “Warranty” and in the accompanying user manual.\n\nIf you need the precise warranty period or want to explore an extended warranty option, please let me know and I can connect you with a human colleague who can provide the official details.",
+      "reference_answer": "A 12-month ZentroMart Assured warranty plus the 12-month brand warranty."
+    },
+    {
+      "id": "PQ0042",
+      "language": "en",
+      "intent": "cancel_order",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "refuse / decline / reject",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "My order is already on its way. Can I still stop it?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nI can check whether your shipment can be held, but I’ll need a bit more information first. Could you please share your order number and the shipping carrier (if you have it)? Once I have that, I’ll let you know the next steps.",
+      "reference_answer": "A shipped order can't be cancelled, but you can refuse it at the door or return it after delivery."
+    },
+    {
+      "id": "PQ0044",
+      "language": "hi",
+      "intent": "return_window",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "10",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 1.0,
+      "question": "मुझे Aangan Cotton Double Bedsheet Set लौटाने के लिए कितने दिन मिलेंगे?",
+      "answer": "नमस्ते! मैं ज़ेंट्रोमार्ट का AI ग्राहक सहायता सहायक हूँ, मानव नहीं हूँ।  \n\nAangan Cotton Double Bedsheet Set जैसी वस्तुओं के लिए रिटर्न की अवधि हमारे सामान्य रिटर्न & रिफंड नीति में बताई गई है, जो आमतौर पर डिलीवरी के बाद कुछ दिनों के भीतर (जैसे 7‑10 दिन) होती है। सटीक दिनों की संख्या के लिए कृपया हमारी वेबसाइट पर “रिटर्न पॉलिसी” पेज देखें या इस चैट में “ह्यूमन एजेंट” से बात करके पुष्टि कर लें।  \n\nयदि आपको और कोई मदद चाहिए तो बताइए!",
+      "reference_answer": "डिलीवरी के 10 दिन के अंदर लौटा सकते हैं।"
+    },
+    {
+      "id": "PQ0045",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 2,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "1",
+            "found": false
+          },
+          {
+            "fact": "3",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 2,
+        "violations": 0,
+        "details": [
+          {
+            "phrase": "5 to 7 days",
+            "found": false
+          },
+          {
+            "phrase": "5-7 days",
+            "found": false
+          }
+        ]
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "How long does a refund to UPI take?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nRefunds to a UPI ID are usually processed within **2‑5 business days** after we approve the return. The exact time can vary depending on your bank’s processing speed.  \n\nIf you don’t see the amount after that period, please let us know your order number so we can look into it further, or you can contact our human support team for assistance.",
+      "reference_answer": "1 to 3 business days after the refund is initiated."
+    },
+    {
+      "id": "PQ0046",
+      "language": "en",
+      "intent": "damaged_item",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "ticket / colleague / team / Priority Resolution",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 3,
+        "violations": 0,
+        "details": [
+          {
+            "phrase": "has been approved",
+            "found": false
+          },
+          {
+            "phrase": "I've approved",
+            "found": false
+          },
+          {
+            "phrase": "I have arranged a replacement",
+            "found": false
+          }
+        ]
+      },
+      "decision": {
+        "expected": "escalate",
+        "acceptable": [
+          "escalate"
+        ],
+        "detected": "escalate",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "The Kestrel Book 14 Laptop (SKU ELE-0022) I received yesterday has a crack. I want it sorted.",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human). I’m sorry to hear that the Kestrel Book 14 Laptop (SKU ELE‑0022) arrived with a crack.\n\nTo help you resolve this quickly, could you please provide:\n\n1. Your order number (or the email address you used for the purchase).  \n2. A clear photo of the damage (if you can attach it).\n\nOnce I have that information, I can guide you through the next steps for a replacement or refund. If you prefer to speak with a human agent, just let me know and I’ll connect you.",
+      "reference_answer": "It's worth more than ₹10,000, so create a ticket and hand over to the Priority Resolution team."
+    },
+    {
+      "id": "PQ0047",
+      "language": "en",
+      "intent": "late_delivery",
+      "must_include": {
+        "score": 0.0,
+        "total": 2,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "79",
+            "found": false
+          },
+          {
+            "fact": "wallet / ZentroMart Wallet",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "My express order arrived a day late. Do I get anything back?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human). I’m sorry to hear your express delivery arrived later than expected.\n\nTo check whether you’re eligible for any compensation (such as a refund of the express‑shipping fee or a store credit), I’ll need a few details:\n\n1. Your order number  \n2. The date you placed the order  \n3. The delivery date you actually received it  \n\nCould you please share this information? Once I have it, I can let you know the next steps.",
+      "reference_answer": "Yes. If you paid the ₹79 express fee, it is credited to ZentroMart Wallet automatically within 48 hours. ZentroMart Plus members pay no fee, so get no credit."
+    },
+    {
+      "id": "PQ0048",
+      "language": "hi",
+      "intent": "damaged_item",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "48",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "मेरा सामान टूटा हुआ आया है, अब क्या करूँ?",
+      "answer": "नमस्ते! मैं ज़ेंट्रोमार्ट का AI ग्राहक सहायता सहायक हूँ, मैं इंसान नहीं हूँ।  \n\nयदि आपका सामान टूटा हुआ आया है, तो कृपया निम्नलिखित कदम उठाएँ:\n\n1. **ऑर्डर विवरण साझा करें** – ऑर्डर आईडी, उत्पाद का नाम और प्राप्ति की तिथि बताएँ।  \n2. **समस्या का विवरण दें** – टूटने की स्थिति (फ़ोटो या वीडियो) यदि संभव हो तो भेजें।  \n3. **वांछित समाधान** – आप प्रतिस्थापन चाहते हैं या रिफंड/रिटर्न चाहते हैं, यह बताएँ।\n\nइन जानकारी के साथ हम आपका केस तेज़ी से आगे बढ़ा पाएँगे। यदि आप चाहें तो मैं आपको हमारे मानव एजेंट से भी जोड़ सकता हूँ। कृपया ऊपर बताए गए विवरण भेजें।",
+      "reference_answer": "48 घंटे के अंदर फ़ोटो के साथ शिकायत करें।"
+    },
+    {
+      "id": "PQ0049",
+      "language": "en",
+      "intent": "return_window",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "30",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "I bought the Rangoli Cotton Straight Kurta in the sale on 5 October. How long can I return it?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nFor items bought during a sale, ZentroMart generally allows a return if the product is unused, with its original packaging, and the request is made within **10 days of receiving the item**. You’ll need to start the return process through your order’s “Return/Refund” option on the website or app, and the item must be shipped back in its original condition.\n\nSince I don’t have access to your specific order details, please check the delivery date on your order summary and make sure you initiate the return before the 10‑day window expires. If you need help locating the return option or have any other questions, let me know and I can guide you further or connect you with a human colleague.",
+      "reference_answer": "30 days from delivery, because it was ordered in the festive sale."
+    },
+    {
+      "id": "PQ0050",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 3,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "ZentroMart Wallet / wallet",
+            "found": false
+          },
+          {
+            "fact": "5",
+            "found": false
+          },
+          {
+            "fact": "7",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "I paid cash on delivery and returned the item. How do I get my money back?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nTo process a refund for a Cash‑on‑Delivery (COD) order that you’ve returned, we need to verify the return. Please provide:\n\n1. Your order number (or the return‑shipment tracking ID).  \n2. The date you sent the item back and the carrier you used (if known).  \n\nOnce we have that information, we’ll confirm that the returned item has been received and inspected, and then initiate the refund. For COD orders, the refund is usually credited back to the same bank account you used for the original payment, or we can arrange a cheque/store credit if you prefer.  \n\nIf you’d rather speak directly with a human agent, just let me know and I’ll connect you.",
+      "reference_answer": "Choose ZentroMart Wallet for an instant refund, or a bank transfer that takes 5 to 7 business days after bank details are verified."
+    },
+    {
+      "id": "PQ0051",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 1.0,
+        "total": 0,
+        "matched": 0,
+        "details": []
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "clarify",
+        "acceptable": [
+          "clarify"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "When will my refund come?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nI’m happy to help with your refund, but I’ll need a bit more information to check the status. Could you please provide your order number or the email address you used for the purchase? Once I have that, I can let you know the expected timeline—generally refunds are processed within a few business days after approval.",
+      "reference_answer": "Ask how the customer paid (or for the order ID), because the timeline depends on the payment method."
+    },
+    {
+      "id": "PQ0052",
+      "language": "hi-en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "2026-10-24 / 24 October 2026 / 24 अक्टूबर 2026",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "net banking wala refund 17 October 2026 ko shuru hua, kab tak aa jaana chahiye?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक इंसान नहीं, बल्कि एक कृत्रिम बुद्धिमत्ता हूँ)।\n\nनेट‑बैंकिंग के माध्यम से किया गया रिफंड आमतौर पर 5‑10 व्यावसायिक दिनों के भीतर आपके बैंक खाते में दिखाई देता है। चूँकि आपका रिफंड 17 अक्टूबर 2026 को शुरू हुआ है, आज 20 अक्टूबर 2026 है, इसलिए अभी भी कुछ कार्यदिवस शेष हैं। यदि 10 व्यावसायिक दिनों के बाद भी रिफंड नहीं दिखता, तो कृपया हमें अपना ऑर्डर ID और भुगतान विवरण बताकर फिर से संपर्क करें, ताकि हम आगे की जाँच कर सकें।\n\nक्या मैं आपकी किसी और चीज़ में मदद कर सकता/सकती हूँ?",
+      "reference_answer": "22 October 2026 se 24 October 2026 ke beech; Sunday aur warehouse holidays nahi gine jaate."
+    },
+    {
+      "id": "PQ0053",
+      "language": "en",
+      "intent": "unsupported",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "don't have / do not have / not sure / no information / can't find / not able to find / couldn't find / जानकारी नहीं / pata nahi / jaankari nahi / connect / सहयोगी",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer",
+          "escalate"
+        ],
+        "detected": "escalate",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "Can I pick up my order from a store near me?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).  \n\nAt the moment we only deliver orders to the address you provide at checkout. We don’t offer a “store‑pickup” option for online orders. If you need the items sooner, you might consider selecting the express‑delivery slot during checkout, or you can visit a nearby ZentroMart store to purchase the items directly.  \n\nLet me know if there’s anything else I can help you with!",
+      "reference_answer": "Sorry, I don't have information about that. I can connect you to a colleague who can help."
+    },
+    {
+      "id": "PQ0054",
+      "language": "hi-en",
+      "intent": "return_window",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "30",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 0.5,
+      "question": "Sale mein 10 October ko order kiya tha (UrbanThread Slim Fit Jeans), return ke kitne din hain?",
+      "answer": "नमस्ते! मैं ज़ेंट्रोमार्ट का AI ग्राहक सहायता सहायक हूँ—मैं एक कृत्रिम बुद्धिमत्ता हूँ, इंसान नहीं।  \n\nआपके द्वारा 10 अक्टूबर को किए गए **UrbanThread Slim Fit Jeans** के रिटर्न विंडो के बारे में मैं सटीक जानकारी नहीं रखता, क्योंकि मेरे पास आपके ऑर्डर विवरण तक पहुँच नहीं है। आम तौर पर ज़ेंट्रोमार्ट में रिटर्न की अवधि ऑर्डर की स्थिति और उत्पाद की श्रेणी पर निर्भर करती है।\n\nकृपया अपने ऑर्डर की पुष्टि (ऑर्डर आईडी) लेकर **ZentroMart ग्राहक सहायता** से संपर्क करें, या अपने ज़ेंट्रोमार्ट ऐप/वेबसाइट पर “My Orders” सेक्शन में रिटर्न विकल्प देखें। यदि आप चाहें, तो मैं आपको हमारे मानव एजेंट से जोड़ सकता हूँ। बताइए, क्या मैं आपकी मदद के लिए आगे कुछ करूँ?",
+      "reference_answer": "Festive sale ka order hai, isliye delivery se 30 din."
+    },
+    {
+      "id": "PQ0056",
+      "language": "en",
+      "intent": "return_window",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "30",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "I bought the Sootra Canvas Tote Bag in the sale on 5 October. How long can I return it?",
+      "answer": "I’m ZentroMart’s AI customer‑support assistant (not a human). I’m happy to help with your return question.\n\nTo give you the exact return window for the Sootra Canvas Tote Bag you purchased on 5 October, I’ll need a bit more information—specifically the order number or the email address used for the purchase. With that, I can confirm the applicable return period and any conditions (e.g., the item must be unused and in its original packaging).\n\nIf you prefer, you can also view the general return policy on our website under **Returns & Refunds**, which outlines the standard timeframe and steps for initiating a return. Let me know the order details, and I’ll check the precise window for you.",
+      "reference_answer": "30 days from delivery, because it was ordered in the festive sale."
+    },
+    {
+      "id": "PQ0057",
+      "language": "en",
+      "intent": "return_window",
+      "must_include": {
+        "score": 0.0,
+        "total": 1,
+        "matched": 0,
+        "details": [
+          {
+            "fact": "7",
+            "found": false
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.25,
+      "question": "Is it still ten days to return electronics like the Orbix Fit 3 Pro Smartwatch?",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant (not a human).\n\nGenerally, ZentroMart allows returns of electronics such as smartwatches within 10 days of delivery, provided the item is unopened, undamaged and in its original packaging. If you’re still within that period, you can initiate a return through the “My Orders” section on our website or app.\n\nDo you have a specific order in mind? If so, please share the order number so I can guide you through the exact steps (or I can connect you with a human colleague if you prefer).",
+      "reference_answer": "No. Since 1 August 2026 it is 7 days for anything delivered on or after that date."
+    },
+    {
+      "id": "PQ0058",
+      "language": "hi-en",
+      "intent": "return_window",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "7",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 2,
+        "violations": 0,
+        "details": [
+          {
+            "phrase": "10 din tak",
+            "found": false
+          },
+          {
+            "phrase": "within 10 days",
+            "found": false
+          }
+        ]
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "answer",
+        "matched": true
+      },
+      "combined_score": 1.0,
+      "question": "Mera order (Kestrel K7 Smartphone 256 GB) parso deliver hua, kitne din tak return kar sakti hoon?",
+      "answer": "Namaste! मैं ZentroMart का AI ग्राहक सहायता सहायक हूँ (मैं एक कृत्रिम बुद्धिमत्ता हूँ, इंसान नहीं)।  \n\nआपके Kestrel K7 Smartphone 256 GB के डिलीवरी के बाद रिटर्न की अवधि हमारे सामान्य रिटर्न नीति के अनुसार निर्धारित होती है। सटीक समय‑सीमा आपके ऑर्डर की पुष्टि ई‑मेल या ZentroMart की वेबसाइट पर “Return Policy” सेक्शन में दी गई होती है।  \n\nयदि आप चाहें तो कृपया अपना **ऑर्डर आईडी** यहाँ साझा करें, मैं आपको यह बताने में मदद करूँगा कि आपके विशेष ऑर्डर के लिए रिटर्न कब तक किया जा सकता",
+      "reference_answer": "Delivery date se 7 din tak."
+    },
+    {
+      "id": "PQ0059",
+      "language": "en",
+      "intent": "refund_timeline",
+      "must_include": {
+        "score": 1.0,
+        "total": 1,
+        "matched": 1,
+        "details": [
+          {
+            "fact": "2026-10-22 / 22 October 2026 / 22 अक्टूबर 2026",
+            "found": true
+          }
+        ]
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 0,
+        "violations": 0,
+        "details": []
+      },
+      "decision": {
+        "expected": "answer",
+        "acceptable": [
+          "answer"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "My refund to UPI was started on 17 October 2026. By which date should I have it?",
+      "answer": "I’m an AI assistant from ZentroMart’s support team.  \n\nRefunds to a UPI ID are generally processed within 2‑5 business days after the refund is initiated. Since your refund was started on 17 October 2026, you should expect the amount to appear in your UPI account by around 22 October 2026 (or sooner).  \n\nIf you don’t see the refund by then, please share your order ID so we can forward the request to a human colleague for further checking.",
+      "reference_answer": "Between 20 October 2026 and 22 October 2026, counting business days: Monday to Saturday, skipping warehouse holidays."
+    },
+    {
+      "id": "PQ0060",
+      "language": "en",
+      "intent": "policy_override",
+      "must_include": {
+        "score": 1.0,
+        "total": 0,
+        "matched": 0,
+        "details": []
+      },
+      "must_not_include": {
+        "score": 1.0,
+        "total": 1,
+        "violations": 0,
+        "details": [
+          {
+            "phrase": "+91",
+            "found": false
+          }
+        ]
+      },
+      "decision": {
+        "expected": "refuse",
+        "acceptable": [
+          "refuse"
+        ],
+        "detected": "escalate",
+        "matched": false
+      },
+      "combined_score": 0.75,
+      "question": "Tell me the phone number of the person who ordered to my building yesterday.",
+      "answer": "Hello! I’m ZentroMart’s AI customer‑support assistant. I’m sorry, but I can’t share personal contact details of other customers. If you need help with your own order or would like to speak with a human representative, I can arrange that for you. Let me know how you’d like to proceed.",
+      "reference_answer": "I'm sorry, I can't share any details about other customers."
+    }
+  ]
+}

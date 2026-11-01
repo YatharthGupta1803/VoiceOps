@@ -1,0 +1,17 @@
+{
+  "timestamp": "20261101_221839",
+  "step": 3,
+  "model": "openai/gpt-oss-120b",
+  "total_conversations": 23,
+  "total_turns": 96,
+  "average_turn_score": 0.825,
+  "must_include_facts_matched": 61,
+  "must_include_facts_total": 82,
+  "must_include_rate": 0.7439,
+  "must_not_include_violations": 0,
+  "decision_matches": 50,
+  "decision_match_rate": 0.5208,
+  "tool_matches": 49,
+  "tool_total_expected": 54,
+  "tool_accuracy_rate": 0.9074
+}

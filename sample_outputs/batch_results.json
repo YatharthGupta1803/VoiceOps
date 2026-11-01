@@ -1,0 +1,35 @@
+[
+  {
+    "transcript": "how fast are refunds to the zentromart wallet",
+    "reply_text": "Refunds to your ZentroMart Wallet are processed instantly – you’ll see the amount in your wallet within 2 hours of the refund being initiated.",
+    "spoken_text": "Refunds to your ZentroMart Wallet are processed instantly – you’ll see the amount in your wallet within 2 hours of the refund being initiated.",
+    "audio_file": "sample_outputs/q1_wallet_refund_reply.wav",
+    "retrieved_sources": [
+      "KB-00.1"
+    ],
+    "executed_tools": [],
+    "input_audio": "sample_audio_tests/q1_wallet_refund.wav"
+  },
+  {
+    "transcript": "does sqli twelve have zentromart assure",
+    "reply_text": "Hi! I’m ZentroMart’s AI assistant. The ZentroMart Assured warranty (12 months from the delivery date) applies only to products that are marked **assured = true** in our catalog.  \n\nTo confirm whether the “SQLI Twelve” you’re interested in (or have already ordered) carries the Assured warranty, could you please share the order ID or the exact product SKU? Once I have that, I can check the product details for you.",
+    "spoken_text": "Hi! I’m ZentroMart’s AI assistant. The ZentroMart Assured warranty (12 months from the delivery date) applies only to products that are marked assured = true in our catalog. To confirm whether the “SQLI Twelve” you’re interested in (or have already ordered) carries the Assured warranty, could you please share the order ID or the exact product SKU? Once I have that, I can check the product details for you.",
+    "audio_file": "sample_outputs/q2_ele_warranty_reply.wav",
+    "retrieved_sources": [
+      "KB-00.1"
+    ],
+    "executed_tools": [],
+    "input_audio": "sample_audio_tests/q2_ele_warranty.wav"
+  },
+  {
+    "transcript": "can i schedule a delivery at midnight",
+    "reply_text": "Hi! I’m ZentroMart’s AI assistant. At the moment we don’t offer delivery slots at midnight – deliveries are scheduled only during the time windows that are available for your area and product type.  \n\nCould you please share your order ID (or the order number you’d like to modify) so I can check the delivery options that are currently available for you?",
+    "spoken_text": "Hi! I’m ZentroMart’s AI assistant. At the moment we don’t offer delivery slots at midnight – deliveries are scheduled only during the time windows that are available for your area and product type. Could you please share your order ID (or the order number you’d like to modify) so I can check the delivery options that are currently available for you?",
+    "audio_file": "sample_outputs/q3_unsupported_reply.wav",
+    "retrieved_sources": [
+      "KB-00.1"
+    ],
+    "executed_tools": [],
+    "input_audio": "sample_audio_tests/q3_unsupported.wav"
+  }
+]

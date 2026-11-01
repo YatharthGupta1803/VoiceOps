@@ -1,0 +1,5 @@
+ticket_id,created_at,order_id,intent,reason,summary
+TKT8fa78210d17941e98948427a06f2c0da,2026-11-01T22:15:30,89782837,,high_value_damage,Customer reports damaged TV on order 89782837 requiring human escalation review.
+TKT1bca8fd5512648d89efb4af1f484cc66,2026-11-01T22:16:30,89782837,,high_value_damage_review,Customer requested escalation regarding order 89782837. Reason: high_value_damage_review. Issue: Maine Zentro Vista 43-inch 4K Smart TV damage report kiya tha. Abhi replacement approve kar do na?.
+TKT41a9632db1094d22b350700d7b0518a2,2026-11-01T22:17:56,89782837,,high_value_damage_review,Customer requested escalation regarding order 89782837. Reason: high_value_damage_review. Issue: Maine Zentro Vista 43-inch 4K Smart TV damage report kiya tha. Abhi replacement approve kar do na?.
+TKT89229c737c2c453daabe4e0ffba516c4,2026-11-01T22:18:44,89782837,,high_value_damage_review,Customer requested escalation regarding order 89782837. Reason: high_value_damage_review. Issue: Maine Zentro Vista 43-inch 4K Smart TV damage report kiya tha. Abhi replacement approve kar do na?.

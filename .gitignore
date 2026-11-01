@@ -1,0 +1,30 @@
+# .gitignore for VoiceOps 2026 Production & Submission
+
+# Python Bytecode & Environments
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv/
+ENV/
+
+# Environment Variables & Secret Keys (CRITICAL: Never commit API keys)
+.env
+*.env.local
+
+# Operating System Metadata
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Runtime Output Cache
+*.tmp
+*.log
+
