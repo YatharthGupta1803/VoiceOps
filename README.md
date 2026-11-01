@@ -132,19 +132,18 @@ sequenceDiagram
 
 ## 📊 Comprehensive Evaluation & Results Comparison
 
-Across the capstone evaluation rubric (100 marks total), each build step was benchmarked against the official validation datasets:
+Across benchmark runs on the official evaluation and practice test suites, each system evolution demonstrated measurable gains in reliability, precision, and tool orchestration:
 
-| Rubric Metric | Step 1: Prompt Only | Step 2: Grounded RAG | Step 3: Multi-turn + Tools | Step 4: Voice Pipeline | Marks Allocated |
-| :--- | :---: | :---: | :---: | :---: | :---: |
-| **Combined Score** | 51.4% | **79.5%** (+28.1%) | **82.5%** | **82.5%** | **10 Marks** (Comparison) |
-| **Must-Include Fact Recall** | 29.3% (17/58) | **70.7%** (41/58) | **74.4%** (61/82) | **74.4%** | **25 Marks** (Grounded Accuracy) |
-| **Retrieval Quality (Gold Hits)** | 0.0% | **93.6%** (44/47) | **93.6%** | **93.6%** | **15 Marks** (Retrieval Quality) |
-| **Tool Execution Accuracy** | N/A | N/A | **90.7%** (49/54) | **90.7%** | **20 Marks** (Conversation Handling) |
-| **Caller Identity Verification** | N/A | N/A | **100% Passed** | **100% Passed** | *Mandatory Policy Check* |
-| **Voice End-to-End Performance** | N/A | N/A | N/A | **100% Processed** | **10 Marks** (Voice Integration) |
-| **Voice Quality & Formatting** | N/A | N/A | N/A | **Normalized** | **10 Marks** (Auditory Experience) |
-| **Report & Codebase Standard** | N/A | N/A | N/A | **Production-Ready**| **10 Marks** (Documentation) |
-| **TOTAL** | — | — | — | — | **100 Marks** |
+| Evaluation Metric | Step 1: Prompt Only | Step 2: Grounded RAG | Step 3: Multi-turn + Tools | Step 4: Voice Pipeline |
+| :--- | :---: | :---: | :---: | :---: |
+| **Combined Score** | 51.4% | **79.5%** (+28.1%) | **82.5%** | **82.5%** |
+| **Must-Include Fact Recall** | 29.3% (17/58) | **70.7%** (41/58) | **74.4%** (61/82) | **74.4%** |
+| **Retrieval Quality (Gold Hits)** | 0.0% | **93.6%** (44/47) | **93.6%** | **93.6%** |
+| **Tool Execution Accuracy** | N/A | N/A | **90.7%** (49/54) | **90.7%** |
+| **Caller Identity Verification** | N/A | N/A | **100% Passed** | **100% Passed** |
+| **Voice End-to-End Performance** | N/A | N/A | N/A | **100% Processed** |
+| **Voice Quality & Formatting** | N/A | N/A | N/A | **Normalized Audio** |
+| **System Reliability & Safety** | Baseline | Grounded | Guarded & Verified | Real-Time Voice |
 
 ### Key Benchmark Insights
 1. **RAG Impact (Step 1 vs Step 2)**: Grounding the model on the 21 knowledge base documents boosted factual policy recall from **29.3% to 70.7%**, completely eliminating hallucinations regarding timelines and non-standard return windows.
