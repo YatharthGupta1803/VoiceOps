@@ -130,25 +130,35 @@ sequenceDiagram
 
 ---
 
-## 📊 Comprehensive Evaluation & Results Comparison
+## 📊 Evaluation & Benchmark Results
 
-Across benchmark runs on the official evaluation and practice test suites, each system evolution demonstrated measurable gains in reliability, precision, and tool orchestration:
+The system components were evaluated across two distinct benchmark suites: the **52-Question Practice Retrieval & Policy Set** (Single-turn: Step 1 vs. Step 2) and the **23-Conversation Dialogue Suite** (Multi-turn: Step 3 & Step 4).
 
-| Evaluation Metric | Step 1: Prompt Only | Step 2: Grounded RAG | Step 3: Multi-turn + Tools | Step 4: Voice Pipeline |
-| :--- | :---: | :---: | :---: | :---: |
-| **Combined Score** | 51.4% | **79.5%** (+28.1%) | **82.5%** | **82.5%** |
-| **Must-Include Fact Recall** | 29.3% (17/58) | **70.7%** (41/58) | **74.4%** (61/82) | **74.4%** |
-| **Retrieval Quality (Gold Hits)** | 0.0% | **93.6%** (44/47) | **93.6%** | **93.6%** |
-| **Tool Execution Accuracy** | N/A | N/A | **90.7%** (49/54) | **90.7%** |
-| **Caller Identity Verification** | N/A | N/A | **100% Passed** | **100% Passed** |
-| **Voice End-to-End Performance** | N/A | N/A | N/A | **100% Processed** |
-| **Voice Quality & Formatting** | N/A | N/A | N/A | **Normalized Audio** |
-| **System Reliability & Safety** | Baseline | Grounded | Guarded & Verified | Real-Time Voice |
+### 1. Single-Turn Evaluation (52 Practice Questions)
+Directly comparable evaluation measuring the effect of grounding over identical question prompts:
+
+| Metric | Step 1: Prompt Baseline | Step 2: Grounded Hybrid RAG | Delta / Note |
+| :--- | :---: | :---: | :--- |
+| **Must-Include Fact Recall** | 29.3% (17/58) | **70.7%** (41/58) | **+41.4% improvement** via grounding |
+| **Must-Not-Include Tripwires**| 0 violations | 0 violations | Baseline & RAG both avoided tripwires |
+| **Retrieval Quality (Gold Recall@5)**| 0.0% | **93.6%** (44/47) | Development set retrieval performance |
+| **Combined Question Score** | 51.4% | **79.5%** | Factual precision + policy adherence |
+
+### 2. Multi-Turn Conversation Evaluation (23 Dialogues, 96 Turns)
+Evaluates state tracking, identity gatekeeping, and tool execution across multi-turn interactions:
+
+| Metric | Step 3: Multi-turn + Tools | Step 4: Voice Pipeline | Benchmark Definition |
+| :--- | :---: | :---: | :--- |
+| **Average Turn Score** | **82.5%** | **82.5%** | Composite metric across 96 dialogue turns |
+| **Tool Execution Accuracy** | **90.7%** (49/54) | **90.7%** (49/54) | Correct `lookup_order` / `create_ticket` calls |
+| **Decision Match Rate** | **52.1%** (50/96) | **52.1%** (50/96) | Exact match on intent (answer, clarify, escalate, refuse) |
+| **Identity Lockout Gate** | **Enforced (1 retry max)**| **Enforced (1 retry max)** | Session locked; no tool calls after 2 failures |
+| **Voice Processing Rate** | N/A | **100% Processed** | End-to-end synthesis on test clips |
 
 ### Key Benchmark Insights
-1. **RAG Impact (Step 1 vs Step 2)**: Grounding the model on the 21 knowledge base documents boosted factual policy recall from **29.3% to 70.7%**, completely eliminating hallucinations regarding timelines and non-standard return windows.
-2. **Retrieval Precision**: The two-pool hybrid approach achieved **93.6% Recall@5** across test questions while respecting document precedence rules (`pol_returns_v4` over superseded `pol_returns_v3`).
-3. **Identity Verification & Security**: In conversations PC021 and PC022 where callers provided incorrect verification credentials, the agent strictly limited retries to one attempt and refused disclosure without leaking customer record details.
+1. **RAG Impact (Step 1 vs Step 2)**: Grounding the model on the 21 knowledge base documents boosted factual policy recall from **29.3% to 70.7%**, dramatically reducing timeline omissions.
+2. **Retriever Scope**: The 93.6% Recall@5 was measured on the 52-question development set with intent-aware lexical boosts; real-world unseen query generalization would benefit from a dedicated held-out split.
+3. **Hard Identity Lockout**: The identity verification gate locks the session upon two consecutive failed verification attempts, cutting off tool calls entirely to prevent brute-forcing 4-digit phone suffixes.
 
 ---
 
@@ -169,9 +179,10 @@ The benchmark evaluation is constructed from a combination of relational e-comme
 
 ---
 
-## ⏱️ Component Latency Breakdown
+## ⏱️ Component Latency Breakdown & Benchmarking
 
-Measured end-to-end processing across standard voice turns over 96 test interactions (Network: Broadband, Groq API + Gnani Vachana Cloud):
+> [!NOTE]
+> Latency metrics below reflect indicative profiling measured over sample voice turns on local development hardware (MacBook M-series, Broadband, Groq API + Gnani Vachana Cloud). To reproduce or benchmark on your own environment, run `python3 run.py --benchmark-latency`.
 
 ```
 +-----------------------------------------------------------------------------------------+

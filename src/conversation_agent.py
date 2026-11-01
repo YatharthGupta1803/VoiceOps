@@ -101,6 +101,13 @@ class SupportConversationAgent:
 
         # 1. State: Needs verification value
         if self.active_order_id and not self.verified:
+            # Hard lockout check: if already at or over cap, refuse immediately before any tool call
+            if self.verification_attempts >= 2:
+                reply = "I'm sorry, but verification attempts for this order have been exceeded. For security and privacy, this session is locked and I cannot disclose or modify details about this order. Please contact our support team from your registered phone number."
+                self.history.append({"role": "customer", "text": customer_message})
+                self.history.append({"role": "agent", "text": reply})
+                return reply, []
+
             verif_val = self._extract_verification_value(customer_message)
             if verif_val:
                 self.verification_attempts += 1
@@ -127,8 +134,8 @@ class SupportConversationAgent:
                 else:
                     # Verification failed
                     if self.verification_attempts >= 2:
-                        # Max retries reached -> refuse to share order details
-                        reply = "I'm sorry, but verification has failed. For security and privacy, I cannot disclose details about this order. You may contact support with your registered details."
+                        # Max retries reached -> session locked
+                        reply = "I'm sorry, but verification has failed. For security and privacy, this session is now locked and I cannot disclose details about this order. You may contact support with your registered details."
                         self.history.append({"role": "customer", "text": customer_message})
                         self.history.append({"role": "agent", "text": reply})
                         return reply, turn_tools
@@ -144,7 +151,7 @@ class SupportConversationAgent:
         if any(term in cust_msg_lower for term in ["insan", "human", "colleague", "connect", "transfer", "talk to someone"]):
             needs_escalation = True
             escalation_reason = "human_agent_requested"
-        elif any(term in cust_msg_lower for term in ["compensation", "500", "rupaye do", "claim ₹"]):
+        elif re.search(r"\b(?:claim\s+₹?|compensation\s+of\s+₹?|rupaye\s+do|claim\s+)\b|(?<!\d)500(?!\d)\s*(?:rupees|rs|rupaye|compensation)", cust_msg_lower):
             needs_escalation = True
             escalation_reason = "unsupported_compensation_claim"
         elif any(term in cust_msg_lower for term in ["damage", "replacement", "broken", "toota", "crack"]):

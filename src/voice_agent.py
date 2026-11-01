@@ -11,29 +11,101 @@ from gnani.tts import GnaniTTSClient
 from src.conversation_agent import SupportConversationAgent
 
 
+def _num_to_indian_words(num_str: str) -> str:
+    """Convert an integer string up to 100,000 into Indian spoken English words."""
+    try:
+        n = int(num_str)
+    except ValueError:
+        return num_str
+
+    if n == 0:
+        return "zero"
+
+    ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine",
+            "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen",
+            "seventeen", "eighteen", "nineteen"]
+    tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"]
+
+    def _two_digits(val: int) -> str:
+        if val < 20:
+            return ones[val]
+        t = tens[val // 10]
+        o = ones[val % 10]
+        return f"{t} {o}".strip()
+
+    def _three_digits(val: int) -> str:
+        h = val // 100
+        rem = val % 100
+        parts = []
+        if h > 0:
+            parts.append(f"{ones[h]} hundred")
+        if rem > 0:
+            parts.append(_two_digits(rem))
+        return " ".join(parts).strip()
+
+    words = []
+    lakhs = n // 100000
+    rem = n % 100000
+    if lakhs > 0:
+        words.append(f"{_two_digits(lakhs)} lakh")
+
+    thousands = rem // 1000
+    rem = rem % 1000
+    if thousands > 0:
+        words.append(f"{_two_digits(thousands)} thousand")
+
+    if rem > 0:
+        words.append(_three_digits(rem))
+
+    return " ".join(words).strip()
+
+
 def normalize_text_for_speech(text: str) -> str:
-    """Format dates, order numbers, and symbols to sound natural when spoken aloud.
-    
-    Guidelines from Capstone Brief:
-    - Include full year in dates
-    - Break long numbers into digit groups with spaces (e.g., 8978 2837)
-    - Spell out currency and symbols (₹ -> Rupees)
-    """
+    """Format dates, numbers, currency, and symbols to sound natural when spoken aloud."""
     if not text or not str(text).strip():
         return "I am here to help. Could you please repeat that?"
 
-    # Replace ₹ with rupees
-    clean = re.sub(r"₹\s*(\d+)", r"\1 rupees", str(text))
+    clean = str(text)
 
-    # Break 8-digit order numbers into two 4-digit groups (e.g., 89782837 -> 8978 2837)
+    # 1. Clean markdown headers, bold, italics, code fences, citations
+    clean = re.sub(r"\[[A-Z0-9_.-]+\]", "", clean)  # remove [REF-2] citations
+    clean = re.sub(r"[*_#`]", "", clean)
+
+    # 2. Currency expansion: handles formatted numbers like ₹1,200 or ₹500 or 1,200 rupees
+    def _replace_currency(match):
+        raw_num = match.group(1).replace(",", "")
+        words = _num_to_indian_words(raw_num)
+        return f"{words} rupees"
+
+    clean = re.sub(r"₹\s*([0-9,]+)", _replace_currency, clean)
+    clean = re.sub(r"([0-9,]+)\s*(?:rupees|inr|rs\.?)\b", _replace_currency, clean, flags=re.IGNORECASE)
+
+    # 3. Date expansion: e.g., '20 Oct.' or '20 Oct 2026' -> '20th October 2026'
+    months = {
+        "jan": "January", "feb": "February", "mar": "March", "apr": "April",
+        "may": "May", "jun": "June", "jul": "July", "aug": "August",
+        "sep": "September", "oct": "October", "nov": "November", "dec": "December"
+    }
+    def _ordinal(d: int) -> str:
+        if 11 <= (d % 100) <= 13:
+            return f"{d}th"
+        return f"{d}" + {1: "st", 2: "nd", 3: "rd"}.get(d % 10, "th")
+
+    def _replace_date(match):
+        day = int(match.group(1))
+        m_str = match.group(2).lower()[:3]
+        year = match.group(3) or "2026"
+        month_full = months.get(m_str, match.group(2))
+        return f"{_ordinal(day)} of {month_full} {year}"
+
+    clean = re.sub(r"\b(\d{1,2})\s+([A-Za-z]{3,9})\.?(?:\s+(\d{4}))?\b", _replace_date, clean)
+
+    # 4. Break 8-digit order numbers into two 4-digit groups (e.g., 89782837 -> 8978 2837)
     clean = re.sub(r"\b(\d{4})(\d{4})\b", r"\1 \2", clean)
 
-    # Clean markdown formatting like **bold**, *italic*, # headers, etc.
-    clean = re.sub(r"[*_#`]", "", clean)
-    clean = re.sub(r"\[[A-Z0-9_.-]+\]", "", clean)  # remove [REF-2] citations from spoken audio
+    # 5. Clean extra whitespace
     clean = re.sub(r"\s+", " ", clean).strip()
 
-    # Ensure speech string is never empty for TTS
     if not clean:
         clean = "I am here to help. How can I assist you with your ZentroMart order today?"
 
